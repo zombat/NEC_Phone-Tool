@@ -1,0 +1,107 @@
+Consult your system documentation for further information on setting up endpoints, and be VERY careful in production environments.
+--manual-timer					-	Set retry interval for any devices that are busy or error out during configuration (accepts 1-999 seconds, default = 30 seconds)
+	manual-timer 30
+--noretry						-	Disables default retry on failed set or busy conditions
+--max-retry						-	Sets the number of maximum retry attempts (0-9, default 3)
+	--max-retry 5
+--factory-values				-	Sets endpoint(s) to factory default values
+--verbose						-	Verbose information
+--debug							-	More information than verbose
+--hosts							-	Accepts a comma separated list of IP addresses for endpoint(s)
+	--hosts xxx.xxx.xxx.xxx
+	--hosts xxx.xxx.xxx.xxx,xxx.xxx.xxx.xxx 
+	** Do not use spaces **
+--host-range					-	Accepts a hypehated start and end address to use (only increments the last octet at this time)
+	--host-range xxx.xxx.xxx.xxx-xxx.xxx.xxx.xxx
+	** Do not use spaces **
+--ipan-csv and --ipan-filter	-	Use IPAN from SV9500 or SV8500 (requires --ipan-filter)
+	--ipan-csv xxxxxxxxx.csv --ipan-filter version=5.0.7.0
+	--ipan-csv xxxxxxxxx.csv --ipan-filter model=itl
+	--ipan-csv xxxxxxxxx.csv --ipan-filter model=itl_12
+	--ipan-csv xxxxxxxxx.csv --ipan-filter model=itz_14dg
+	--ipan-csv xxxxxxxxx.csv --ipan-filter all
+admin-password					-	Used if the ADMIN password is different than the default
+	admin-password 8675309
+new-password					-	Changes ADMIN password to specified value
+	new-password 8675309
+set-dhcp						-	Enable or disable DHCP on endpoint(s)
+	set-dhcp true
+	set-dhcp false
+set-lldp						-	Enable or disable LLDP on endpoint(s)
+	set-lldp true
+	set-lldp false
+ip-address						-	Set IP address
+	ip-address xxx.xxx.xxx.xxx
+subnet-mask						-	Set Subnet mask
+	subnet-mask xxx.xxx.xxx.xxx
+default-gateway					-	Set default gateway
+	default-gateway xxx.xxx.xxx.xxx
+dns-address						-	Set DNS address
+	dns-address xxx.xxx.xxx.xxx
+spare-backup-mode				-	Sets the Spare/Backup IP mode of the endpoint(s)
+	spare-backup-mode disable
+	spare-backup-mode spare
+	spare-backup-mode backup
+sip-servers						-	Set SIP server 1 through 4 and port numbers
+	sip-servers xxx.xxx.xxx.xxx:xxxx
+	sip-servers xxx.xxx.xxx.xxx:xxxx,xxx.xxx.xxx.xxx:xxxx,...
+	** Do not use spaces **
+lan-vlan-mode					-	Enable or disable manual VLAN ID for LAN port
+	lan-vlan-mode enable
+	lan-vlan-mode disable
+lan-vlan-id						-	Set manual VLAN ID for LAN port
+	lan-vlan-id 42
+lan-vlan-priority				-	Set 108.11q QoS value for LAN port (0-7)
+	lan-vlan-priority 7
+pc-vlan-mode					-	Enable or disable manual VLAN ID for PC port
+	pc-vlan-mode enable
+	pc-vlan-mode disable
+pc-vlan-id						-	Set manual VLAN ID for PC port
+	pc-vlan-id 42
+pc-vlan-priority				-	Set 108.11q QoS value for PC port (0-7)
+	pc-vlan-priority 7
+pc-port-security				-	Enable or disable PC port security
+	pc-port-security disable
+	pc-port-security enable
+pc-port-available				-	Enable or disable the PC port
+	pc-port-available disable
+	pc-port-available enable
+voice-recording					- 	Enable or disable recording
+	voice-recording automatic
+	voice-recording disable
+recording-mode					-	Set the recording mode
+	recording-mode static
+	recording-mode dynamic
+recording-segments				-	Set recording segments to be sent
+	recording-segments all
+	recording-segments talk
+recording-server-1-address		-	Set the 1st recording server IP
+	recording-server-1-address	xxx.xxx.xxx.xxx
+license-server					-	Set the licernse server IP
+	license-server xxx.xxx.xxx.xxx
+gigabit-ethernet				-	Enable or disable licensed gigabit ethernet
+	gigabit-ethernet true
+	gigabit-ethernet false
+line-keys						- 	Set amount of licensed line keys
+	line-keys 32
+	line-keys 16
+	line-keys 8
+license-user-prefix				-	Set user prefix for license server
+	license-user-prefix xxxxxxxx
+encryption-auth-mode			-	Enable or disable encryption
+	encryption-auth-mode disable
+	encryption-auth-mode enable
+encryption-icon					-	Enable or disable encryption icon
+	encryption-icon disable
+	encryption-icon enable
+encryption-otp					-	Set one time password to enable encryption
+	encryption-otp xxxxxxxxxxxxxxxxxxxxxxxx
+
+
+
+
+
+
+
+
+
