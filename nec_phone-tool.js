@@ -521,9 +521,6 @@ logonDevice = (host, macAddress, protocolType, callback) => {
 	if(variables.debug){
 		logMessage(`Debug - Logon Function - logonDevice`);
 	}
-	if(variables.verbose){
-		logMessage(`Verbose - URL Accessed [${macAddress}]: ${protocolType}://${host}/index.cgi?username=ADMIN&password=${variables.auth.adminPassword}`);
-	}
 	httpGet(`${protocolType}://${host}`, `/index.cgi?username=ADMIN&password=${variables.auth.adminPassword}`, true, deviceInformation, (sessionID, deviceInformation) => {
 		if(variables.verbose){
 			logMessage(`Verbose - Session ID from Logon [${macAddress}]: ${sessionID}`);
@@ -782,9 +779,6 @@ loadArgsFromEnv = (callback) => {
 		variables.auth.adminPassword = process.env.adminPassword;
 		if(variables.verbose){
 			logMessage(`Verbose - Using specific admin password`);
-		}
-		if(variables.debug){
-			logMessage(`Debug - variables.auth.adminPassword = ${variables.auth.adminPassword}`);
 		}
 	}
 
